@@ -23,7 +23,8 @@ public class UserEntity {
     public UserEntity() {
     }
 
-    public UserEntity(String name, String email, String password, Date created_at, Date updated_at) {
+    public UserEntity(Long id, String name, String email, String password, Date created_at, Date updated_at) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
