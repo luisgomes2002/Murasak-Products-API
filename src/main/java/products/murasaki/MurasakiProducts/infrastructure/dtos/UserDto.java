@@ -1,5 +1,8 @@
 package products.murasaki.MurasakiProducts.infrastructure.dtos;
 
+import products.murasaki.MurasakiProducts.core.enums.MurasaKiProductsUserTypes;
+
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public record UserDto(
@@ -7,6 +10,7 @@ public record UserDto(
         String name,
         String email,
         String password,
-        Date created_at,
-        Date updated_at
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt,
+        MurasaKiProductsUserTypes userType
 ) {}

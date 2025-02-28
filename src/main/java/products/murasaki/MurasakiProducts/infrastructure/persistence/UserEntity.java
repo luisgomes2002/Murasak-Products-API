@@ -1,7 +1,9 @@
 package products.murasaki.MurasakiProducts.infrastructure.persistence;
 
 import jakarta.persistence.*;
+import products.murasaki.MurasakiProducts.core.enums.MurasaKiProductsUserTypes;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -17,19 +19,22 @@ public class UserEntity {
     private String email;
 
     private String password;
-    private Date created_at;
-    private Date updated_at;
+    private LocalDateTime createdAt;
+    private LocalDateTime  updatedAt;
+
+    private MurasaKiProductsUserTypes userType;
 
     public UserEntity() {
     }
 
-    public UserEntity(Long id, String name, String email, String password, Date created_at, Date updated_at) {
-        this.id = id;
+    public UserEntity( String name, String email, String password, LocalDateTime createdAt, LocalDateTime updatedAt, MurasaKiProductsUserTypes userType) {
+
         this.name = name;
         this.email = email;
         this.password = password;
-        this.created_at = created_at;
-        this.updated_at = updated_at;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.userType = userType;
     }
 
     public Long getId() {
@@ -64,19 +69,27 @@ public class UserEntity {
         this.password = password;
     }
 
-    public Date getCreated_at() {
-        return created_at;
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreated_at(Date created_at) {
-        this.created_at = created_at;
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public Date getUpdated_at() {
-        return updated_at;
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdated_at(Date updated_at) {
-        this.updated_at = updated_at;
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public MurasaKiProductsUserTypes getUserType() {
+        return userType;
+    }
+
+    public void setUserType(MurasaKiProductsUserTypes userType) {
+        this.userType = userType;
     }
 }

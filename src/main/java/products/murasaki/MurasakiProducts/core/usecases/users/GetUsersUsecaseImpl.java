@@ -1,4 +1,4 @@
-package products.murasaki.MurasakiProducts.core.usecases;
+package products.murasaki.MurasakiProducts.core.usecases.users;
 
 import products.murasaki.MurasakiProducts.core.entities.User;
 import products.murasaki.MurasakiProducts.core.gateway.UserGateway;

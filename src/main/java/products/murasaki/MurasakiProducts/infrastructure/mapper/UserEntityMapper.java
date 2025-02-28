@@ -9,12 +9,12 @@ public class UserEntityMapper {
 
     public UserEntity toEntity(User user){
         return new UserEntity(
-                user.id(),
                 user.name(),
                 user.email(),
                 user.password(),
-                user.created_at(),
-                user.updated_at()
+                user.createdAt(),
+                user.updatedAt(),
+                user.userType()
         );
 
     }
@@ -25,8 +25,9 @@ public class UserEntityMapper {
                 userEntity.getName(),
                 userEntity.getEmail(),
                 userEntity.getPassword(),
-                userEntity.getCreated_at(),
-                userEntity.getUpdated_at()
+                userEntity.getCreatedAt(),
+                userEntity.getUpdatedAt(),
+                userEntity.getUserType()
         );
     }
 

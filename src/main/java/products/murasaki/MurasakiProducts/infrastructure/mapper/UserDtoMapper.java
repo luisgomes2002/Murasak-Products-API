@@ -13,8 +13,9 @@ public class UserDtoMapper {
                 user.name(),
                 user.email(),
                 user.password(),
-                user.created_at(),
-                user.updated_at()
+                user.createdAt(),
+                user.updatedAt(),
+                user.userType()
         );
     }
 
@@ -24,8 +25,9 @@ public class UserDtoMapper {
                 userDto.name(),
                 userDto.email(),
                 userDto.password(),
-                userDto.created_at(),
-                userDto.updated_at()
+                userDto.createdAt(),
+                userDto.updatedAt(),
+                userDto.userType()
         );
     }
 }
